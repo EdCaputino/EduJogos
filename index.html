@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>EduJogos — Jogos Educativos</title>
+    <meta name="description"
+        content="Portal simples para hospedar jogos educativos, com destaque para jogos feitos no Scratch para anos finais do Ensino Fundamental I." />
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container nav" role="navigation" aria-label="Menu principal">
+            <div class="logo" aria-label="EduJogos">
+                <span class="logo-badge" aria-hidden="true">EJ</span>
+                <span>EduJogos</span>
+            </div>
+            <nav>
+                <a href="#inicio">Início</a>
+                <a href="#jogos">Jogos</a>
+                <a href="#sobre">Sobre</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="inicio" class="container">
+        <section class="hero">
+            <div class="hero-inner">
+                <div>
+                    <span class="tag">Ensino Fundamental I (anos finais)</span>
+                    <h1 class="title">Jogos que ensinam — divertidos, acessíveis e prontos para sala de aula.</h1>
+                    <p class="subtitle">Este portal hospeda jogos educativos, com destaque para projetos feitos no
+                        <strong>Scratch</strong>. Ideal para turmas do 4º e 5º ano, com foco em habilidades de
+                        Matemática, Português, Ciências e Raciocínio Lógico.
+                    </p>
+                </div>
+                <div class="hero-card">
+                    <strong>Dica rápida:</strong>
+                    <p>Quer compartilhar um jogo conosco e incluí-lo no portal?
+                        Nos envie um e-mail com o link de incorporação e detalhes sobre o jogo!
+
+                        <br>
+                        <code><b>contato@edujogos.com</b></code>
+                    </p>
+                    <p class="helper">No Scratch, abra seu projeto → Compartilhar → Incorporar → copie o link.</p>
+                </div>
+            </div>
+        </section>
+
+        <section aria-labelledby="titulo-destaque">
+            <h2 id="titulo-destaque" class="section-title">Jogo em destaque</h2>
+            <div class="card">
+                <div class="scratch-wrap" role="region" aria-label="Jogo do Scratch incorporado">
+                    <iframe src="https://scratch.mit.edu/projects/529169900/embed" allowtransparency="true" width="485"
+                        height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+                </div>
+                <p class="helper">Se o jogo não carregar no seu provedor, confira se o domínio permite iframes do
+                    scratch.mit.edu e se você está usando <strong>https</strong>.</p>
+            </div>
+        </section>
+
+        <section id="jogos" aria-labelledby="titulo-jogos">
+            <h2 id="titulo-jogos" class="section-title">Outros jogos</h2>
+            <div class="grid" role="list">
+                <!-- Exemplo de cartão de jogo. Você pode duplicar este bloco para cada novo jogo. -->
+                <article class="game" role="listitem">
+                    <div class="thumb" aria-hidden="true">Capa do jogo</div>
+                    <div>
+                        <div class="g-title">Tabuada Ninja</div>
+                        <div class="g-meta">Matemática · Operações · 4º/5º ano</div>
+                    </div>
+                    <a class="btn" href="#" aria-disabled="true" title="Em breve">Em breve</a>
+                </article>
+
+                <article class="game" role="listitem">
+                    <div class="thumb" aria-hidden="true">Capa do jogo</div>
+                    <div>
+                        <div class="g-title">Caça-palavras Sílaba Tônica</div>
+                        <div class="g-meta">Português · Leitura · 4º/5º ano</div>
+                    </div>
+                    <a class="btn" href="#" aria-disabled="true" title="Em breve">Em breve</a>
+                </article>
+
+                <article class="game" role="listitem">
+                    <div class="thumb" aria-hidden="true">Capa do jogo</div>
+                    <div>
+                        <div class="g-title">Eco Aventura</div>
+                        <div class="g-meta">Ciências · Meio Ambiente · 4º/5º ano</div>
+                    </div>
+                    <a class="btn" href="#" aria-disabled="true" title="Em breve">Em breve</a>
+                </article>
+
+                <article class="game" role="listitem">
+                    <div class="thumb" aria-hidden="true">Capa do jogo</div>
+                    <div>
+                        <div class="g-title">Lógica das Formas</div>
+                        <div class="g-meta">Raciocínio Lógico · 4º/5º ano</div>
+                    </div>
+                    <a class="btn" href="#" aria-disabled="true" title="Em breve">Em breve</a>
+                </article>
+            </div>
+            <p class="helper">Quando tiver o link do novo jogo (Scratch, H5P, ou outro), substitua o botão <em>Em
+                    breve</em> por um link para a página do jogo ou para uma nova seção com iframe.</p>
+        </section>
+
+        <section id="sobre" aria-labelledby="titulo-sobre">
+            <h2 id="titulo-sobre" class="section-title">Sobre o projeto</h2>
+            <div class="about">
+                <div class="card">
+                    <span class="pill">Objetivos</span>
+                    <ul>
+                        <li>Oferecer jogos curtos que reforçam conteúdos do 4º e 5º ano.</li>
+                        <li>Estimular autonomia, colaboração e resolução de problemas.</li>
+                        <li>Facilitar o acesso do professor: abrir e jogar, sem instalar nada.</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <span class="pill">Acessibilidade</span>
+                    <ul>
+                        <li>Layout responsivo (computador, tablet e celular).</li>
+                        <li>Contraste e tipografia legível.</li>
+                        <li>Rótulos ARIA nos principais componentes.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div style="display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap">
+                <small>© <span id="year"></span> EduJogos. Conteúdos para fins educacionais.</small>
+                <small>Produto da disciplina Software Educacional, Profº Flávio Pereira - IFBA - Santo Amaro.</small>
+                <small>Desenvolvido Por <a href="https://edilson-portfolio.netlify.app/" target="_blank">Edilson Silva</a> e Márcia Maciel.</small>
+                <small>Feito com ❤️ e Scratch.</small>
+            </div>
+        </div>
+    </footer>
+
+    <div class="mobile-nav" id="mobileNav">☰</div>
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#inicio">Início</a>
+        <a href="#jogos">Jogos</a>
+        <a href="#sobre">Sobre</a>
+    </div>
+
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+        const mobileNav = document.getElementById('mobileNav');
+        const mobileMenu = document.getElementById('mobileMenu');
+        mobileNav.addEventListener('click', () => {
+            mobileMenu.style.display = mobileMenu.style.display === 'flex' ? 'none' : 'flex';
+        });
+    </script>
+
+    <!-- Sem JavaScript obrigatório; o trecho abaixo só preenche o ano automaticamente. -->
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,374 @@
+:root {
+    --brand: #577FE8;
+    /* cor de destaque (você já usa essa em outros projetos) */
+    --brand-600: #3f66d8;
+    --ink: #0f172a;
+    /* texto principal */
+    --muted: #475569;
+    /* texto secundário */
+    --bg: #f8fafc;
+    /* fundo */
+    --card: #ffffff;
+    /* cartões */
+    --border: #e2e8f0;
+    /* bordas sutis */
+    --radius: 18px;
+    --shadow: 0 8px 24px rgba(2, 6, 23, .08);
+}
+
+* {
+    box-sizing: border-box
+}
+
+html,
+body {
+    height: 100%
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Inter, "Noto Sans", sans-serif;
+    color: var(--ink);
+    background: var(--bg);
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: rgba(255, 255, 255, .7);
+    backdrop-filter: saturate(180%) blur(10px);
+    border-bottom: 1px solid var(--border);
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 20px
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px
+}
+
+.logo {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-weight: 800;
+    letter-spacing: .3px
+}
+
+.logo-badge {
+    width: 36px;
+    height: 36px;
+    border-radius: 12px;
+    background: var(--brand);
+    display: grid;
+    place-items: center;
+    color: white;
+    font-weight: 900;
+    box-shadow: var(--shadow);
+}
+
+nav a {
+    color: var(--muted);
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: 600
+}
+
+nav a:hover {
+    color: var(--brand)
+}
+
+/* Hero */
+.hero {
+    padding: 48px 0 24px
+}
+
+.hero-inner {
+    display: grid;
+    grid-template-columns: 1.2fr .8fr;
+    gap: 24px;
+    align-items: center
+}
+
+.title {
+    font-size: clamp(24px, 3.4vw, 40px);
+    line-height: 1.15;
+    margin: 0 0 10px
+}
+
+.subtitle {
+    margin: 0;
+    color: var(--muted)
+}
+
+.hero-card {
+    background: linear-gradient(180deg, #fff, #f3f7ff);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 20px;
+    box-shadow: var(--shadow);
+}
+
+.tag {
+    display: inline-block;
+    background: rgba(87, 127, 232, .12);
+    color: var(--brand);
+    border: 1px solid rgba(87, 127, 232, .3);
+    padding: 6px 10px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 700
+}
+
+/* Featured / Scratch */
+section {
+    padding: 24px 0
+}
+
+.section-title {
+    font-size: 22px;
+    margin: 0 0 12px
+}
+
+.card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 18px;
+    box-shadow: var(--shadow);
+}
+
+.scratch-wrap {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    background: #000;
+}
+
+.scratch-wrap iframe {
+    width: 100%;
+    height: 100%;
+    border: 0
+}
+
+.helper {
+    font-size: 13px;
+    color: var(--muted);
+    margin-top: 8px
+}
+
+/* Games grid */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px
+}
+
+.game {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: transform .12s ease, box-shadow .12s ease;
+}
+
+.game:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow)
+}
+
+.thumb {
+    width: 100%;
+    aspect-ratio: 16/9;
+    border-radius: 12px;
+    border: 1px dashed var(--border);
+    display: grid;
+    place-items: center;
+    color: var(--muted);
+    font-weight: 700;
+    background: #f1f5f9
+}
+
+.g-title {
+    font-weight: 800;
+    margin: 2px 0
+}
+
+.g-meta {
+    font-size: 13px;
+    color: var(--muted);
+    margin-top: -4px
+}
+
+.btn {
+    display: inline-block;
+    text-align: center;
+    padding: 10px 12px;
+    border-radius: 12px;
+    font-weight: 800;
+    text-decoration: none;
+    border: 1px solid var(--brand);
+    color: #fff;
+    background: var(--brand);
+}
+
+.btn:focus,
+.btn:hover {
+    background: var(--brand-600)
+}
+
+.btn[aria-disabled="true"] {
+    opacity: .55;
+    pointer-events: none
+}
+
+/* About */
+.about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px
+}
+
+.about .pill {
+    display: inline-block;
+    padding: 6px 10px;
+    border-radius: 999px;
+    background: #eef2ff;
+    color: #3730a3;
+    font-weight: 700;
+    font-size: 13px
+}
+
+ul {
+    margin: 0 0 0 18px
+}
+
+/* Footer */
+footer {
+    padding: 32px 0;
+    color: var(--muted);
+    border-top: 1px solid var(--border);
+    margin-top: 28px
+}
+
+/* Responsivo */
+@media (max-width: 980px) {
+    .hero-inner {
+        grid-template-columns: 1fr;
+    }
+
+    .grid {
+        grid-template-columns: repeat(2, 1fr)
+    }
+
+    .about {
+        grid-template-columns: 1fr
+    }
+}
+
+@media (max-width: 560px) {
+    nav {
+        display: none
+    }
+
+    .grid {
+        grid-template-columns: 1fr
+    }
+}
+
+/* Mobile menu */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: var(--ink)
+}
+
+.mobile-nav {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: var(--brand);
+    color: #fff;
+    border-radius: 50%;
+    width: 56px;
+    height: 56px;
+    display: grid;
+    place-items: center;
+    font-size: 28px;
+    cursor: pointer;
+    box-shadow: var(--shadow);
+    z-index: 30
+}
+
+.mobile-menu {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    display: none;
+    flex-direction: column;
+    padding: 10px;
+    z-index: 29
+}
+
+.mobile-menu a {
+    padding: 10px;
+    text-decoration: none;
+    color: var(--ink);
+    font-weight: 600;
+    border-radius: 10px
+}
+
+.mobile-menu a:hover {
+    background: var(--brand);
+    color: #fff
+}
+
+
+@media (max-width: 980px) {
+    .hero-inner {
+        grid-template-columns: 1fr
+    }
+
+    .grid {
+        grid-template-columns: repeat(2, 1fr)
+    }
+
+    .about {
+        grid-template-columns: 1fr
+    }
+}
+
+@media (max-width: 560px) {
+    nav {
+        display: none
+    }
+
+    .grid {
+        grid-template-columns: 1fr
+    }
+
+    .menu-toggle {
+        display: block
+    }
